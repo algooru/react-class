@@ -3,11 +3,36 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from 'react-router-dom';
+import Switch from './use-state/switch';
+import Cart from './use-state/cart';
+import Todo from './use-state/todo';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+  },
+
+  {
+    path: '/use-state',
+    children: [
+      { path: 'switch', element: <Switch /> },
+      { path: 'cart', element: <Cart /> },
+      { path: 'todo', element: <Todo /> },
+    ],
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
