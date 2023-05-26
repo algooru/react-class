@@ -35,10 +35,10 @@ const HomePage = () => {
                 title="Simple Counter"
               />
               <ExerciseLink to="/use-effect/fetch-data" title="Fetch Data" />
-              <ExerciseLink
+              {/* <ExerciseLink
                 to="/use-effect/event-listener"
                 title="Event Listener"
-              />
+              /> */}
               <ExerciseLink
                 to="/use-effect/local-storage"
                 title="Local Storage"

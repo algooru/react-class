@@ -12,7 +12,6 @@ import {
 import Switch from './use-state/switch';
 import Cart from './use-state/cart';
 import Todo from './use-state/todo';
-import EventListener from './use-effect/event-listener';
 import Counter from './use-effect/simple-counter';
 import DataFetcher from './use-effect/fetch-data';
 import LocalStorage from './use-effect/local-storage';
@@ -41,7 +40,6 @@ const router = createBrowserRouter([
     path: '/use-effect',
     children: [
       { path: 'simple-counter', element: <Counter /> },
-      { path: 'event-listener', element: <EventListener /> },
       { path: 'fetch-data', element: <DataFetcher /> },
       { path: 'local-storage', element: <LocalStorage /> },
       { path: 'geo-location', element: <GeoLocation /> },
